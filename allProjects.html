@@ -70,12 +70,31 @@ body {
 
 $(document).ready(function() {
 	
+	var setView = localStorage.getItem("setView");
+	if(setView !=null && setView != ''){
+		$('ul#filter .current').removeClass('current');
+		$('#'+setView).addClass('current');
+		 if(setView == 'all') {
+		        $('div.hidden').fadeIn('slow').removeClass('hidden');
+		      } else {
+		        $('div.item').each(function() {
+		          if(!$(this).hasClass(setView)) {
+		            $(this).fadeOut('normal').addClass('hidden');
+		          } else {
+		            $(this).fadeIn('slow').removeClass('hidden');
+		          }
+		        });
+		      }
+		 localStorage.removeItem("setView");
+	}
+	
+	
 	$('ul#filter a').click(function() {
 		 $('ul#filter .current').removeClass('current');
 		    $(this).parent().addClass('current');
 		    
 		    var filterVal = $(this).text().toLowerCase().replace(' ','-');
-		    
+		    		    
 		    if(filterVal == 'all') {
 		        $('div.hidden').fadeIn('slow').removeClass('hidden');
 		      } else {
@@ -118,8 +137,8 @@ $(document).ready(function() {
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="allProjects.html">Sample Work</a></li>
-					<li><a href="files/NAMRATA DESHPANDE.pdf">Resume</a></li>
+					<li><a href="allProjects.html">Recent Projects</a></li>
+					<li><a href="files/NAMRATA DESHPANDE.pdf" download>Resume</a></li>
 					<li><a href="index.html#contact">Contact</a></li>
 				</ul>
 			</div>
@@ -136,12 +155,12 @@ $(document).ready(function() {
 			<div class="col-lg-12">
 				<h1 class="page-header">Selected Recent Projects</h1>
 				<ul class="nav nav-pills nav-justified" id="filter">
-					<li class="current presentation"><a href="#">All</a></li>
-					<li role="presentation"><a href="#">Data Analysis</a></li>
-					<li role="presentation" ><a href="#">Visualization</a></li>
-					<li role="presentation"><a href="#">Machine Learning</a></li>
-					<li role="presentation"><a href="#">Development</a></li>
-					<li role="presentation"><a href="#">User Study</a></li>
+					<li id = "all" class="current presentation"><a href="">All</a></li>
+					<li id="data-analysis"  role="presentation"><a href="">Data Analysis</a></li>
+					<li id="visualization" role="presentation" ><a href="">Visualization</a></li>
+					<li id="machine-learning" role="presentation"><a href="">Machine Learning</a></li>
+					<li id="development" role="presentation"><a href="">Development</a></li>
+					<li id="user-study" role="presentation"><a href="">User Study</a></li>
 				</ul>
 			</div>
 		</div>
@@ -149,31 +168,31 @@ $(document).ready(function() {
 		<hr>
 
 		<!-- Project One -->
-		<div class="row item visualization data-analysis user-study">
+			<div class="row item data-analysis visualization development">
 			<div class="col-md-7">
-				<a href="files/WomenInStemViz.pdf"> <img
-					class="img-responsive img-hover" src="images/P5.png" alt="">
+				<a href="https://namrata4.github.io/Startup-Funding-Stages/"> <img
+					class="img-responsive img-hover" src="images/P1.jpg" alt="">
 				</a>
 			</div>
 			<div class="col-md-5">
-				<h3>Women in STEM: By the numbers</h3>
-				<h4>A Data Analysis and Visualization Report</h4>
-				<p>Although women constitute about half of the US labor force
-					(47%), only 25% of them are currently employed in STEM. The project
-					focuses on the current statistics for gender disparity in STEM and
-					explore the reasons behind it along with suggesting some probable
-					steps that could be taken to overcome the disparity</p>
+				<h3>Startup & Funding</h3>
+				<h4>A scrolly-telling visual</h4>
+				<p>Startups are very important for the growth of an economy.
+					This project uses a visual story-telling project approach to help
+					new entrepreneurs to learn about funding process in US. Data
+					Analysis was performed on data provided by Crunchbase, Quandl.com
+					and Kauffman.org to describe the different steps in startup funding
+					along with description of current statistics.</p>
 				<span class="label label-success">Data Analysis</span> <span
-					class="label label-success">Visualization</span> <span
-					class="label label-success">R</span> <span
-					class="label label-success">Adobe Illustrator</span><br>
-				<br> <a class="btn btn-primary" href="files/WomenInStemViz.pdf">View
+					class="label label-success">Interactive UI</span> <span
+					class="label label-success">D3</span> <span
+					class="label label-success">Visualization</span><br>
+				<br> <a class="btn btn-primary"
+					href="https://namrata4.github.io/Startup-Funding-Stages/">View
 					Visualization</i>
-				</a> <a class="btn btn-primary" href="files/WomenInStem.pdf">Download
+				</a> <a class="btn btn-primary" href="files/StartupFundingStages.pdf" download>Download
 					Report</i>
 				</a>
-
-
 			</div>
 		</div>
 		<!-- /.row -->
@@ -200,6 +219,30 @@ $(document).ready(function() {
 					class="label label-success">Machine Learning</span><br>
 				<br> <a class="btn btn-primary"
 					href="https://namrata4.github.io/Statistical-Analysis-in-R/Prediction%20of%20Titanic%20Survivors/">View
+					Project</i>
+				</a>
+
+			</div>
+		</div>
+		
+		<div class="row item machine-learning data-analysis">
+			<div class="col-md-7">
+				<a href="https://github.com/namrata4/Machine_Learning_Algorithms/blob/master/Machine_Learning_Nearest_Neighbors.ipynb"> <img
+					class="img-responsive img-hover" src="images/knn.png" alt="">
+				</a>
+			</div>
+			<div class="col-md-5">
+				<h3>Nearest Neighbor Algorithm (from scratch)</h3>
+				<h4>Machine Learning Algorithms Implementation</h4>
+				<p>Implementation of nearest neighbor and KNN from scratch along with
+				testing the written algorithm on Boston dataset. Cross-validation is also implemented from scratch to optimize 
+				the model.</p>
+				<span class="label label-success">Statistical Models</span> <span
+					class="label label-success">Optimization</span> <span
+					class="label label-success">Python</span> <span
+					class="label label-success">Machine Learning</span><br>
+				<br> <a class="btn btn-primary"
+					href="https://github.com/namrata4/Machine_Learning_Algorithms/blob/master/Machine_Learning_Nearest_Neighbors.ipynb">View
 					Project</i>
 				</a>
 
@@ -233,33 +276,7 @@ $(document).ready(function() {
 		
 
 		<!-- Project Two -->
-		<div class="row item data-analysis visualization development">
-			<div class="col-md-7">
-				<a href="https://namrata4.github.io/Startup-Funding-Stages/"> <img
-					class="img-responsive img-hover" src="images/P1.jpg" alt="">
-				</a>
-			</div>
-			<div class="col-md-5">
-				<h3>Startup & Funding</h3>
-				<h4>A scrolly-telling visual</h4>
-				<p>StartUps are very important for the growth of an economy.
-					This project uses a visual story-telling project approach to help
-					new entrepreneurs to learn about funding process in US. Data
-					Analysis was performed on data provided by Crunchbase, Quandl.com
-					and Kauffman.org to describe the different steps in startup funding
-					along with description of current statistics.</p>
-				<span class="label label-success">Data Analysis</span> <span
-					class="label label-success">ScrollyTelling</span> <span
-					class="label label-success">D3</span> <span
-					class="label label-success">Visualization</span><br>
-				<br> <a class="btn btn-primary"
-					href="https://namrata4.github.io/Startup-Funding-Stages/">View
-					Visualization</i>
-				</a> <a class="btn btn-primary" href="files/StartupFundingStages.pdf">Download
-					Report</i>
-				</a>
-			</div>
-		</div>
+	
 		<!-- /.row -->
 
 	
@@ -287,6 +304,34 @@ $(document).ready(function() {
 					href="https://namrata4.github.io/NutritionFinder-Interactive-Visualization-Tool/">View
 					Visualization</i>
 				</a>
+			</div>
+		</div>
+		
+		<div class="row item visualization data-analysis user-study">
+			<div class="col-md-7">
+				<a href="files/WomenInStemViz.pdf"> <img
+					class="img-responsive img-hover" src="images/P5.png" alt="">
+				</a>
+			</div>
+			<div class="col-md-5">
+				<h3>Women in STEM: By the numbers</h3>
+				<h4>A Data Analysis and Visualization Report</h4>
+				<p>Although women constitute about half of the US labor force
+					(47%), only 25% of them are currently employed in STEM. The project
+					focuses on the current statistics for gender disparity in STEM and
+					explore the reasons behind it along with suggesting some probable
+					steps that could be taken to overcome the disparity</p>
+				<span class="label label-success">Data Analysis</span> <span
+					class="label label-success">Visualization</span> <span
+					class="label label-success">R</span> <span
+					class="label label-success">Adobe Illustrator</span><br>
+				<br> <a class="btn btn-primary" href="files/WomenInStemViz.pdf">View
+					Visualization</i>
+				</a> <a class="btn btn-primary" href="files/WomenInStem.pdf" download>Download
+					Report</i>
+				</a>
+
+
 			</div>
 		</div>
 		<!-- /.row -->
@@ -345,7 +390,7 @@ $(document).ready(function() {
 					class="label label-success">User Study</span><br>
 				<br> <a class="btn btn-primary"
 					href="files/FinalVisualization.pdf">View Project</i></a> <a
-					class="btn btn-primary" href="files/CrimeAgainstWomen.pdf">Download
+					class="btn btn-primary" href="files/CrimeAgainstWomen.pdf" download>Download
 					Report</i>
 				</a>
 			</div>

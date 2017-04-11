@@ -3,235 +3,328 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <title>Namrata Deshpande</title>
+<title>Namrata Deshpande</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/portfolio-item.css" rel="stylesheet">
-     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+<!-- Custom CSS -->
+<link href="css/portfolio-item.css" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"
+	type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 <style type="text/css">
-
 .navbar-inverse {
-       background-color: #007acc;
-    border-color: #007acc;
+	background-color: #007acc;
+	border-color: #007acc;
 }
 
-
 .navbar-inverse .navbar-nav>li>a {
-    color: #fff;
+	color: #fff;
 }
 
 .navbar-inverse .navbar-brand {
-    color: #fff;
-}  
-
-.navbar-inverse .navbar-nav>li>a:hover,
-.navbar-inverse .navbar-nav>li>a:focus {
-    color: #9d9d9d;
+	color: #fff;
 }
 
-body{
-font-family:'freight-text-pro',serif;}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus
+	{
+	color: #9d9d9d;
+}
 
+body {
+	font-family: 'freight-text-pro', serif;
+}
+
+.portfolio-item {
+cursor : pointer;
+}
+
+.portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #007acc;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
 </style>
+<script type="text/javascript">
+
+function setView(view){
+	
+	if(view!= null && typeof(Storage) !== "undefined"){
+		localStorage.setItem("setView", view);
+		
+	}
+	window.location.href = "allProjects.html";
+}
+
+</script>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Namrata Deshpande</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="allProjects.html">Sample Work</a>
-                    </li>
-                    <li>
-                        <a href="files/NAMRATA DESHPANDE.pdf">Resume</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Namrata Deshpande</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="allProjects.html">Recent Projects</a></li>
+					<li><a href="files/NAMRATA DESHPANDE.pdf" download>Resume</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
 
-    <!-- Page Content -->
-    <div class="container">
+	<!-- Page Content -->
+	<div class="container">
 
-        <!-- Portfolio Item Heading -->
-        <!-- <div class="row">
+		<!-- Portfolio Item Heading -->
+		<!-- <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Portfolio Item
                     <small>Item Subheading</small>
                 </h1>
             </div>
         </div> -->
-        <!-- /.row -->
+		<!-- /.row -->
 
-        <!-- Portfolio Item Row -->
-        <div class="row">
+		<!-- Portfolio Item Row -->
+		<div class="row">
+			<div class="col-lg-12">
+				<h3 class="page-header">About me</h3>
+			</div>
+			<div class="col-md-4">
+				<img class="img-responsive" src="images/namrata.jpg" alt="">
+				<h4
+					style="font-size: 1.6em; font-family: 'petersburg-web', serif; font-weight: 400;">Namrata
+					Deshpande</h4>
+				<p>
+					Information Management Graduate Candidate<br> Specializing in
+					Data Science and Analytics<br> University of Washington<br>
+					nomid@uw.edu
+				</p>
+			</div>
 
-            <div class="col-md-4">
-                <img class="img-responsive" src="images/pic.jpg" alt="">
-                <h4 style="font-size: 1.6em; font-family: 'petersburg-web',serif; font-weight: 400;">Namrata Deshpande</h4>
-  				<p>Information Management Graduate Candidate<br>
-  				Specializing in Data Science and Analytics<br>
-  				 University of Washington<br>
-  				nomid@uw.edu</p>
-            </div>
+			<div class="col-md-8" style="font-size: 1.4em; font-weight: 400;">
 
-            <div class="col-md-8" style="font-size: 1.4em; font-weight: 400;">
-                <h3>About Me</h3>
-                <p>I am a <b>passionate programmer</b> who's always up for taking up new challenges and learning new things and technologies. 
-                I have worked with a diverse set of languages and tools for <b>web architecture, design and development</b>. 
-                I enjoy doing <b>both front end as well as back end development.</b> </p>
-				<p>My recent works focus on using my programming and problem solving skills for 
-				not only making sense of complex unstructured data by <b>data analysis, predictive and inferential modelling</b>, 
-				but also on communicating these data-decisions effectively using user-friendly and 
-				<b>interactive visual representations.</b></p>
-            </div>
+				<p>I am a passionate programmer who's always up for new
+					challenges and learning new things and technologies. I have worked
+					with a diverse set of languages and tools for software and web
+					design and development. I enjoy doing both front end as well as
+					back end development. I am dedicated to create designs with an
+					emphasis on UX to make day to day interactions and interpretations
+					easier.</p>
+				<p>
+					My recent works focus on using my programming and problem solving
+					skills for not only making sense of complex unstructured data by
+					data analysis, predictive modeling and inferential statistics</b>, but
+					also on communicating these data-decisions effectively using
+					user-friendly and interactive visual representations
+				</p>
+			</div>
 
-        </div>
-        <!-- /.row -->
+		</div>
+		<!-- /.row -->
 
-        <!-- Related Projects Row -->
-        <div class="row">
+		<!-- Related Projects Row -->
+		<div class="row">
 
-            <div class="col-lg-12">
-                <h3 class="page-header">What I Offer?</h3>
-            </div>
-		 <div class="col-sm-1 col-xs-6" style="text-align: center"> </div>
+			<div class="col-lg-12">
+				<h3 class="page-header">What I Offer?</h3>
+			</div>
+
+
+			<div class=" col-xs-3" style="text-align: center">
+				<i class="fa fa-code fa-4x" aria-hidden="true"
+					style="color: #007acc;"></i>
+				<h3>Programming</h3>
+
+				<ul class="text-muted">
+					<li>4 years of experience in Advanced Java Development</li>
+					<li>Well versed in R and Python with focus on statistical
+						modeling</li>
+					<li>UI development using Javascript, HTML5, CSS3, Bootstrap,
+						JQuery, AngularJS.</li>
+				</ul>
+
+			</div>
+
+			<div class=" col-xs-3" style="text-align: center">
+				<i class="fa fa-database fa-4x" aria-hidden="true"
+					style="color: #007acc;"></i>
+				<h3>Data Engineering</h3>
+				<ul class="text-muted">
+					<li>Experienced in SQL with query optimization, execution plans, indexes. </li>
+					<li>Data Warehouse design and development using Kimball's or Inmon's techniques</li>
+					<li>Familiarity with NoSQL using MongoDB, MapReduce and Hadoop</li>
+				</ul>
+			</div>
+			<div class=" col-xs-3" style="text-align: center">
+				<i class="fa fa-pie-chart fa-4x" aria-hidden="true"
+					style="color: #007acc;"></i>
+				<h3>Statistics & Machine Learning</h3>
+				<ul class="text-muted">
+					<li>Inferential and Predictive statistics, Hypothesis Testing </li>
+					<li>Representation, optimization and evaluation machine learning algorithms using R and Python</li>
+					<li>Data Wrangling and cleaning</li>
+				</ul>
+			</div>
+
+			<div class="col-xs-3" style="text-align: center">
+				<i class="fa fa-bar-chart fa-4x" aria-hidden="true"
+					style="color: #007acc;"></i>
+				<h3>Analytics & Visualizations</h3>
+				<ul class="text-muted">
+					<li>Dashboard creation in Tableau </li>
+					<li>Interactive visualizations in D3, Shiny, R, Adobe Illustrator</li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- /.row -->
+
+
+		<div class="row" id="work">
+
+			<div class="col-lg-12">
+				<h3 class="page-header">Recent projects</h3>
+
+			</div>
+			<div class="col-md-4 col-sm-6 portfolio-item" onclick="setView('machine-learning')">
+                    <div class="portfolio-link" >
+                    
+                        <img src="images/Shiny.jpg" style="height:274px; width:360px" class="img-responsive" alt="">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>Machine Learning</h4>
+                                                
+                    </div></div>
+
+			<div class="col-md-4 col-sm-6 portfolio-item" onclick="setView('data-analysis')">
+                    <div class="portfolio-link" >
+                    
+                        <img src="images/P2.png" style="height:274px; width:360px" class="img-responsive" alt="">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>Data Analysis</h4>
+                                                
+                    </div></div>
+
+			<div class="col-md-4 col-sm-6 portfolio-item" onclick="setView('visualization')">
+                    <div class="portfolio-link" >
+                    
+                        <img src="images/P5.png" style="height:274px; width:360px" class="img-responsive" alt="">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>Data Visualization</h4>
+                                                
+                    </div></div>
+                    
+                    <div class="col-md-4 col-sm-6 portfolio-item" style="left: 150px" onclick="setView('development')">
+                    <div class="portfolio-link" >
+                    
+                        <img src="images/P1.jpg" style="height:274px; width:360px" class="img-responsive" alt="">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>UI Design and Development</h4>
+                                                
+                    </div></div>
+                    
+                     <div class="col-md-4 col-sm-6 portfolio-item" style="left: 150px" onclick="setView('user-study')">
+                   <div class="portfolio-link" >
+                    
+                        <img src="images/P2.png" style="height:274px; width:360px" class="img-responsive" alt="">
+                    </div>
+                    <div class="portfolio-caption">
+                        <h4>User Study</h4>
+                                                
+                    </div></div>
+			
+		</div>
+
+		<div class="row" id="contact">
+
+			<div class="col-lg-12">
+				<h3 class="page-header">Get in touch!</h3>
+
+			</div>
+			<div class="col-sm-4" style="text-align: center">
+
+				<a href="mailto:nomid@uw.edu" target="_top"> <i
+					class="fa fa-envelope fa-4x" aria-hidden="true"
+					style="color: #007acc"></i></a>
+				<p>
+					nomid@uw.edu <br>namrata.deshpande4@gmail.com
+				</p>
+			</div>
+
+			<div class="col-sm-4" style="text-align: center">
+				<i class="fa fa-phone fa-4x" aria-hidden="true"
+					style="color: #007acc;"></i>
+
+				<p>(425)524-1947</p>
+			</div>
+
+			<div class="col-sm-4" style="text-align: center">
+				<i class="fa fa-4x fa-linkedin-square sr-icons btn-primary"
+					aria-hidden="true" style="cursor: pointer"
+					onclick="window.open('https://www.linkedin.com/in/namratadeshpande4','_blank')"></i>
+				<p>Connect on Linkedin</p>
+			</div>
+
+		</div>
+		<br>
+		<hr>
+
 		
-            <div class="col-sm-2 col-xs-6" style="text-align: center">
-                <i class="fa fa-user-secret fa-4x" aria-hidden="true" style="color: #007acc;"></i>
-                        <h3>Experience</h3>
-                        <p class="text-muted">3+ years of experience</p>
-            </div>
-
-            <div class="col-sm-2 col-xs-6" style="text-align: center">
-               <i class="fa fa-code fa-4x" aria-hidden="true" style="color: #007acc;"></i>
-                        <h3>Programming</h3>
-                        <p class="text-muted">Java, JavaScript, R, Python</p>
-            </div>
-
-            <div class="col-sm-2 col-xs-6" style="text-align: center">
-               <i class="fa fa-database fa-4x" aria-hidden="true" style="color: #007acc;"></i>
-                        <h3>Database</h3>
-                        <p class="text-muted">Oracle, MySQL, Hibernate and iBATIS Frameworks, MongoDB</p>
-            </div>
-
-            <div class="col-sm-2 col-xs-6" style="text-align: center">
-                <i class="fa fa-bar-chart fa-4x" aria-hidden="true" style="color: #007acc;"></i>
-                        <h3>Analytics & Visualizations </h3>
-                        <p class="text-muted">Data Wrangling, Statistical Theory, Tableau, D3, Analysis and Visualizations with R</p>
-            </div>
-            <div class="col-sm-2 col-xs-6" style="text-align: center">
-                <i class="fa fa-laptop fa-4x" aria-hidden="true" style="color: #007acc;"></i>
-                        <h3>Web Development</h3>
-                        <p class="text-muted">HTML5, CSS3, Bootstrap, AngularJS, DOJO 1.10, EXT JS-4.0, JQuery</p>
-            </div>
-            <div class="col-sm-1 col-xs-6" style="text-align: center"> </div>
-
-        </div>
-        <!-- /.row -->
-
-        
-        
-        <div class="row" id="contact">
-
-            <div class="col-lg-12">
-                <h3 class="page-header">Get in touch!</h3>
-                
-            </div>
-            <div class="col-sm-4" style="text-align: center">
-                
-                        <a href="mailto:nomid@uw.edu" target="_top">
-                        <i class="fa fa-envelope fa-4x" aria-hidden="true" style="color: #007acc"></i></a>
-                        <p >nomid@uw.edu
-                        <br>namrata.deshpande4@gmail.com</p>
-            </div>
-
-            <div class="col-sm-4" style="text-align: center">
-               <i class="fa fa-phone fa-4x" aria-hidden="true" style="color: #007acc;"></i>
-                        
-                        <p >(425)524-1947</p>
-            </div>
-
-            <div class="col-sm-4" style="text-align: center">
-               <i class="fa fa-4x fa-linkedin-square sr-icons btn-primary" aria-hidden="true" style="cursor: pointer"
-               onclick="window.open('https://www.linkedin.com/in/namratadeshpande4','_blank')"></i>
-                        <p>Connect on Linkedin</p>
-            </div>
-            
-            </div>
-            <br>
-            <hr>
-        
-	 <div class="well">
-            <div class="row">
-            <div class="col-md-3">
-					</div>
-                <div class="col-md-3">
-					<a class="btn btn-lg btn-primary btn-block" href="allProjects.html">View Sample Work</a>
+		<!-- Footer -->
+		<footer>
+			<div class="row">
+				<div class="col-lg-12">
+					<p>Copyright &copy; Namrata Deshpande</p>
 				</div>
-				<div class="col-md-3">
-					<a class="btn btn-lg btn-primary btn-block" href="files/NAMRATA DESHPANDE.pdf">Download
-						Resume</a>
-				</div>
-				<div class="col-md-3">
-					
-				</div>
-            </div>
-        </div>
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Namrata Deshpande</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
+			</div>
+			<!-- /.row -->
+		</footer>
 
-    </div>
-    <!-- /.container -->
+	</div>
+	<!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
 
 </body>
 
